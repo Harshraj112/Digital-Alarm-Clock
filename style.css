@@ -1,0 +1,97 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: palevioletred;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clock-container {
+    text-align: center;
+    background-color: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    height: 200px;
+    width: 400px;
+}
+
+.time {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    margin: 15px 0;
+    font-family: monospace;
+}
+
+.controls {
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+    transform: translateX(89px);
+}
+
+input[type="time"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 0px 0px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#setAlarm {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#setAlarm:hover {
+    background-color: #45a049;
+}
+
+#stopAlarm {
+    background-color: #f44336;
+    color: white;
+    display: none;
+}
+
+#stopAlarm:hover {
+    background-color: #da190b;
+}
+
+.alarm-status {
+    margin-top: 10px;
+    color: #666;
+}
+
+.ringing {
+    animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
